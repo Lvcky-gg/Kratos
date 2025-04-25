@@ -1,64 +1,58 @@
 <template>
-    <sidebar id="custom-sidebar"/>
+    <top-header id="top-header"></top-header>
+    <!-- <sidebar id="custom-sidebar"/> -->
     <div id="app-content">
-    <header id="top-header"></header>
     <map id="map-container"></map>
-    <footer id="home-footer"></footer>
+
     </div>
+
 
 
 </template>
 <script setup>
 import Map from '../components/Map.vue';
 import Sidebar from '../components/Sidebar.vue';
-import Footer from '../components/Footer.vue';
+import TopHeader from '../components/TopHeader.vue';
+
 </script>
 <style scoped>
-#custom-sidebar {
-    width: 150px;
+
+body, html, #app {
     height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#custom-sidebar {
+    width: calc(100vw - 95vw)!important;
+    height: calc(100vw - 5vw)!important;
     background-color: #0e0d0d;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
     padding: 20px;
+    box-sizing: border-box;
 }
+
 #app-content {
-    margin-left: 250px;
-    padding: 20px;
-}
-#top-header {
-    height: 60px;
-    background-color: #333;
-    color: white;
+    width: calc(100vw - 5vw)!important;
     display: flex;
-    align-items: center;
-    padding: 0 20px;
-    position: absolute;
+    flex-direction: column;
+    height: calc(100vw - 5vw)!important;
+    box-sizing: border-box;
+}
+
+#top-header {
+    height: calc(100vw - 95vw)!important;
+    width: 100vw;
+    background-color: #0e0d0d !important;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    z-index: 20;
+    z-index: 10;
+
 }
-#map-container {
-    width: calc(100% - 250px); /* Adjust this to match the width of your sidebar */
-    height: calc(100vh - 60px); /* Adjust this to account for the header height */
-    position: absolute;
-    top: 60px; /* Adjust this to account for the header height */
-    left: 250px; /* Adjust this to match the width of your sidebar */
-}
-#home-footer {
-    height: 60px;
-    background-color: #333;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 20;
-}
+
+
 </style>
