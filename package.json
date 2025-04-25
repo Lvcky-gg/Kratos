@@ -16,7 +16,7 @@
     "app:preview": "npm run vite:build && tsc && electron ."
   },
   "build": {
-    "appId": "YourAppID",
+    "appId": "alpha-0.0.1",
     "asar": true,
     "directories": {
       "buildResources": "assets",
