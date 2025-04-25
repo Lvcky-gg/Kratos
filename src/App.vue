@@ -6,7 +6,6 @@ import Map from "./components/Map.vue";
 <template>
 <router-view/>
   <div id="app">
-    <h1>Vue 3 + ArcGIS JS API</h1>
     <Map :defaultBasemap="'Imagery'" :defaultGround="'world-elevation'"/>
   </div>
 </template>
